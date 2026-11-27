@@ -33,3 +33,6 @@
 - Select two expenses and pay in a single action, verify each gets its own link. Opposite payer direction must be selectable separately. Verify calendar and card reports use linked payments even when transfer date is in next month.
 - Restore old backup with an unlinked transfer; verify it affects calendar net, not per-item status. Allocate full amount across matching expenses; net must remain unchanged. Invalid links must reject restore.
 - Test chime, mute toggle, reduced motion, refresh online/offline, update from prior service worker, export and restore with attachments.
+
+## v1.2.1
+- Verify at 390 CSS px: no overlap in date/month fields, receipt controls, category buttons; every navigation tap returns to top; add button does not cover content.

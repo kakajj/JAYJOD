@@ -1,4 +1,4 @@
-# JAYJOD เจจด — v1.2.0
+# JAYJOD เจจด — v1.2.1
 
 JAYJOD is a static, offline-first expense tracker for two people. No backend, no CDN, no build step.
 
@@ -46,3 +46,6 @@ JavaScript syntax checked; generated XLSX opened with openpyxl and verified Thai
 - Database schema 3; same database name and stores, additive optional expenseId on settlements; restores schemas 1, 2, 3. Backup before deploying to the same URL. Excel includes settlement sheet and transaction-level outstanding amounts; CSV transaction export includes settlement status.
 - Audio is synthesized locally and may be muted by iOS/browser policies. Refresh checks the service worker and reloads without clearing data; offline uses cache. No new dependencies.
 - Actual iPhone/PWA browser testing remains required; no claim of full end-to-end validation.
+
+## v1.2.1 — UI hotfix
+- iOS date/month fields stacked on narrow screens; category and receipt controls spaced; add button integrated into navigation; navigation resets scroll. Schema unchanged.
