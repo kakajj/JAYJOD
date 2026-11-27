@@ -1,4 +1,4 @@
-# JAYJOD เจจด — v1.1.1
+# JAYJOD เจจด — v1.2.0
 
 JAYJOD is a static, offline-first expense tracker for two people. No backend, no CDN, no build step.
 
@@ -38,3 +38,11 @@ JavaScript syntax checked; generated XLSX opened with openpyxl and verified Thai
 - เปลี่ยนชื่อแอปเป็น JAYJOD เจจด, ชื่อ PWA เป็น เจจด และชื่อไฟล์ export/backup เป็น jayjod-*
 - คง DB name, schema, manifest id และไอคอนเดิม เพื่อไม่กระทบข้อมูลและการติดตั้งเดิม
 - อัปเดต service worker cache; ชื่อบน Home Screen เดิมอาจต้องติดตั้ง shortcut ใหม่ตาม OS
+
+## v1.2.0 — Pastel Blue & Linked Settlement
+- Mobile-first layout tuned for ~390 CSS px (iPhone 16e), safe areas, floating add button, refresh/update button, lightweight animations respecting reduced motion, success chime with settings toggle.
+- Settlement: select one or multiple expenses in the chosen date/card view, choose transfer direction and amount per expense, supports partial payments. Net balance offsets opposite directions; per-expense status only changes with explicit linked payments.
+- Old unlinked transfers remain in the original calendar month and affect its net balance. Link them via the report by allocating the full old amount among matching expenses in the same month and direction; no duplicate payment. Deleting a linked payment reopens the balance. Changing payer/month or reducing debt below payments, and deleting linked expenses, requires removing their linked transfers first.
+- Database schema 3; same database name and stores, additive optional expenseId on settlements; restores schemas 1, 2, 3. Backup before deploying to the same URL. Excel includes settlement sheet and transaction-level outstanding amounts; CSV transaction export includes settlement status.
+- Audio is synthesized locally and may be muted by iOS/browser policies. Refresh checks the service worker and reloads without clearing data; offline uses cache. No new dependencies.
+- Actual iPhone/PWA browser testing remains required; no claim of full end-to-end validation.
