@@ -36,3 +36,9 @@
 
 ## v1.2.1
 - Verify at 390 CSS px: no overlap in date/month fields, receipt controls, category buttons; every navigation tap returns to top; add button does not cover content.
+
+## v1.3.0 verification
+- `node --check` ทุก JS: PASS
+- `node test_logic.cjs`: PASS (120 จำนวนงวด, การปัดเศษ, วันสิ้นเดือน, เริ่มงวด 5/6, ป้องกันซ้ำและรายการในถังขยะ)
+- Browser migration test attempted: BLOCKED (Chromium ERR_BLOCKED_BY_ADMINISTRATOR on local URL). ไม่ยืนยันว่า migration runtime ผ่าน. ต้องทดสอบจริงหลัง backup.
+- UAT: restore v1.2.1 JSON; ตรวจยอดและรูปเดิม; สร้างแผนผ่อน/รายจ่ายประจำ; ยืนยันซ้ำหลัง refresh; กู้ draft/รูป; ลบ/undo; export; offline; iPhone safe area.

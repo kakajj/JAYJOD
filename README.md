@@ -49,3 +49,6 @@ JavaScript syntax checked; generated XLSX opened with openpyxl and verified Thai
 
 ## v1.2.1 — UI hotfix
 - iOS date/month fields stacked on narrow screens; category and receipt controls spaced; add button integrated into navigation; navigation resets scroll. Schema unchanged.
+
+## v1.3.0 — Daily Productivity
+ต่อยอดจาก v1.2.1 โดยคง IndexedDB ชื่อเดิม เพิ่ม schema 4 และ stores drafts, favorites, installmentPlans, recurringRules, scheduledOccurrences, trash. สำรอง JSON ก่อนอัปเกรดและใช้ URL เดิม. ตั้งค่า > แผนผ่อน / รายจ่ายประจำ เพื่อสร้างแผน; หน้าแรกยืนยันรายการถึงกำหนด. ยอดผ่อนรวมต้องรวมดอกเบี้ย และส่วนของคนแรกเป็นยอดรวมทั้งแผน; งวดเริ่มต้นใช้วันที่งวดที่ต้องการเริ่มจด. แบบร่างบันทึกหลังหยุดแก้ไข 300ms โดยประมาณ. ถังขยะเก็บ 30 วัน ตรวจเมื่อเปิดแอป. รายการที่มีการโอนคืนผูกไว้ยังต้องจัดการยอดโอนก่อนลบ. กดการ์ดแบบกระชับเพื่อดูรายละเอียด; กดดาวเพื่อสร้างทางลัด. ข้อมูลแผนและแบบร่างรวมใน Backup JSON. รายการรอยืนยันไม่รวมยอดรายจ่ายจริง. การแก้ยอดงวดใน Pending จะบันทึกเป็นยอดจริงของงวดนั้น ไม่ปรับยอดงวดอื่นอัตโนมัติ. แผนผ่อนที่เริ่มยืนยันแล้วล็อกยอดรวมและจำนวนงวดเพื่อป้องกันการเปลี่ยนประวัติ. 
